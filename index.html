@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title></title>
+    <script src="./lib/keymaster.js"></script>
+    <script src = './lib/movingObject.js' ></script>
+    <script src = './lib/util.js' ></script>
+    <script src = './lib/asteroid.js' ></script>
+    <script src = './lib/gameView.js' ></script>
+    <script src = './lib/game.js' ></script>
+    <script src = './lib/ship.js' ></script>
+    <script src = './lib/bullet.js' ></script>
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+    <script>
+      var canvasEl = document.getElementById("game-canvas");
+      canvasEl.height = window.innerHeight - 100;
+      canvasEl.width = window.innerWidth - 100;
+      var ctx = canvasEl.getContext("2d");
+      var game = new Asteroids.Game();
+      var gameView = new Asteroids.GameView(ctx, game);
+      gameView.start();
+    </script>
+  </body>
+</html>
